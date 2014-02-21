@@ -1,0 +1,76 @@
+body {
+	font:8pt verdana;
+	color:#FFFFFF;
+	background: #121C3F;
+	overflow-y:auto;
+	overflow-x:clip;
+	SCROLLBAR-HIGHLIGHT-COLOR: #000066;  
+	SCROLLBAR-SHADOW-COLOR: #FFFFFF; 
+	SCROLLBAR-FACE-COLOR: #CFD4E8; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #485C9E; 
+	SCROLLBAR-TRACK-COLOR: #7B8FD6; 
+	SCROLLBAR-DARKSHADOW-COLOR: #43459B;
+}
+
+TABLE
+{
+	font:8pt verdana;
+	border-color:#FFFFFF;
+}
+
+.boxbody	
+{
+	font:8pt verdana;
+	background:#EAECEF;
+	color:black;
+}
+
+.boxbodyalternate
+{
+	font:8pt verdana;
+	background:#CCD4E0;
+	color:black;
+}
+
+.boxheader        
+{ 
+	font:8pt verdana;
+	background:#7B8FD6; 
+	font-weight:bold;
+}
+
+.auteur	
+{
+	font:bold 8pt verdana;
+	background:#E8E9A1;
+	color:black;
+}
+
+.interligne
+{
+	font:bold 8pt verdana;
+	background:#121C3F;
+	color:black;
+}
+
+TD.SecondNiveau
+{
+	font:8pt verdana;
+	background:#C1C6D9;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#7B8FD6', EndColorStr='#EAECEF')
+}
+
+a 
+{
+	text-decoration:none;
+	font:8pt verdana;
+	color:#FFFFFF;
+}
+
+a:hover 
+{
+	font:8pt verdana;
+	text-decoration:underline;
+	color: #FFFFFF;
+}

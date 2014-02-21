@@ -1,0 +1,1039 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>DotNetSysInfo</name>
+    <version>1.3.2117.12973</version>
+    <fullname>DotNetSysInfo, Version=1.3.2117.12973, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="T:DotNetSysInfo.constantes">
+      <summary>
+ Classe des Constantes utilisées dans le projet 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="F:DotNetSysInfo.constantes.FichierCSS">
+      <summary>
+ Chargement de la clé du fichier CSS à utiliser. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.CoucheReseau">
+      <summary>
+ Classe de Gestion du Traffic Réseau à partir de SNMP 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.#ctor">
+      <summary>
+ Cree une nouvelle instance 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.#ctor(Snmp.ManagerSession,RFC1157.Mgmt)">
+      <summary>
+ Crée une nouvelle instance de l'objet Couche Réseau en transmettant les paramètres 
+ nécessaires 
+ </summary>
+ <param name="LaSession" />
+ <param name="LaMib" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.chargeInterfaceReseau(Snmp.ManagerSession,RFC1157.Mgmt)">
+      <summary>
+ Fonction de chargement de toute la table avec les informations sur les interfaces réseau 
+ </summary>
+ <param name="Session" />
+ <param name="LaMib" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.chargeIP(Snmp.ManagerSession,RFC1157.Mgmt)">
+      <summary>
+ Function de chargement des informations sur les IP associées aux interfaces 
+ </summary>
+ <param name="Session" />
+ <param name="LaMib" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.ChercheTypeInterface(System.String)">
+      <summary>
+ Permet de connaître le type de l'interface transmis suivant son N° de type 
+ </summary>
+ <param name="NumeroTypeInterface" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.CalculeTrafic(System.String)">
+      <summary>
+ Permet de calculer le volume traffic afin de l'afficher avec les unités 
+ </summary>
+ <param name="NombreOctets" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.TestStatut(System.String)">
+      <summary>
+ Renvoie le statut de l'interface 
+ </summary>
+ <param name="Statut" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.CalculeVitesse(System.String)">
+      <summary>
+ Calcule la vitesse afin de la renvoyer avec les unités 
+ </summary>
+ <param name="Vitesse" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.CoucheReseau.ChercheIP(System.Int32,System.Data.DataTable,System.String)">
+      <summary>
+ Cherche dans la table des IP celles qui sont associées avec l'interface transmise 
+ </summary>
+ <param name="ItemTable" />
+ <param name="LaTable" />
+ <param name="Type" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.Fonctions">
+      <summary>
+ Classe avec les fonctions du Projet 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.IP(System.String)">
+      <summary>
+ Recupère l'IP de la machine 
+ </summary>
+ <param name="adIp" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.TestZero(System.Int32,System.String,System.Boolean)">
+      <summary>
+ Vérifie la valeur est supérieure à 1 et affiche le pluriel 
+ </summary>
+ <param name="Lavaleur" />
+ <param name="LUnite" />
+ <param name="TestPlur" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.AfficheAge(System.TimeSpan)">
+      <summary>
+ Affiche le temps en détail de vie du process ASPNET 
+ </summary>
+ <param name="LeTimeSpan" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.formatSize(System.Int64,System.Boolean)">
+      <summary>
+ Formatte la taille en Ko 
+ </summary>
+ <param name="lSize" />
+ <param name="booleanFormatOnly" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.AfficheTaille(System.Double,System.String)">
+      <summary>
+ Crée le détail de la taille des données 
+ </summary>
+ <param name="TailleMemoire" />
+ <param name="Unite" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.AfficheVitesse(System.Int64)">
+      <summary>
+ Formatte la vitesse en Hz 
+ </summary>
+ <param name="laVitesse" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.AfficheDateTimeComplete(System.DateTime)">
+      <summary>
+ Permet d afficher la date au format texte complet, 
+ en partant d'une date au format francais DD/MM/YYYY à HH:mm:SS:mmmm 
+ </summary>
+ <param name="LaDate" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.PremiereLettreMaj(System.String)">
+      <summary>
+ Permet de donner le texte avec la premiere lettre en majuscule 
+ </summary>
+ <param name="texte" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.FormatHeureAffiche(System.Int32)">
+      <summary>
+ Permet de formatter l heure ou les minutes sur 2 caracteres 
+ </summary>
+ <param name="Valeur" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.Redirect(System.String,System.Int32)">
+      <summary>
+ Permet de renvoyer l'utilisateur de la page après un travail vers une autre page 
+ </summary>
+ <param name="LaPage" />
+ <param name="LeTemps" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	14/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.Fonctions.ChargeConnexionParam(System.Management.ConnectionOptions@,System.String@)">
+      <summary>
+ Modifie les valeurs des paramètres de connexion sur la machine 
+ </summary>
+ <param name="LeCo" />
+ <param name="stringMachineName" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	06/09/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.TimeClass">
+      <summary>
+ Classe de gestion des temps 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.TimeClass.Secondes">
+      <summary>
+ Propriété du nombre des secondes de l'objet 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	28/06/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.TimeClass.Minutes">
+      <summary>
+ Propriété du nombre des minutes de l'objet 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	28/06/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.TimeClass.Heures">
+      <summary>
+ Propriété du nombre des heures de l'objet 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	28/06/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.TimeClass.Jours">
+      <summary>
+ Propriété du nombre des Jours de l'objet 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	28/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.#ctor">
+      <summary>
+ Constructeur par Défaut de la classe 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Constructeur transmettant la valeur de chaque parametre de temps (jour, heure, minute et seconde) 
+ </summary>
+ <param name="NbJours" />
+ <param name="NbHeures" />
+ <param name="NbMinutes" />
+ <param name="NbSecondes" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.#ctor(System.Int64)">
+      <summary>
+ Constructeur transmettant le nombre total de secondes 
+ </summary>
+ <param name="TotalNbSecondes" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.ConversionDetaillee(System.Int64)">
+      <summary>
+ Procédure permettant de calculer chaque variable à partir du Nombre total de secondes 
+ </summary>
+ <param name="NBSec" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.ConversionSeconde">
+      <summary>
+ Fonction permettant de connaître le nombre total de seconde à partir des valeurs des variables 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.Egal(DotNetSysInfo.TimeClass)">
+      <summary>
+ Fonction de test d'égalité de 2 objets TimeClass 
+ </summary>
+ <param name="ValeurAComparer" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.DifferenceA(DotNetSysInfo.TimeClass)">
+      <summary>
+ Fonction qui renvoie la différence entre 2 objets TimeClass en secondes 
+ </summary>
+ <param name="ValeurAComparer" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.AjouterTemps(DotNetSysInfo.TimeClass)">
+      <summary>
+ Fonction qui ajoute un objet TimeClass à un autre par la somme des 2 totaux de secondes 
+ </summary>
+ <param name="ValAAjouter" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.TimeClass.ReturnChaineTemps">
+      <summary>
+ Fonction qui renvoie la chaine permettant de définir textuellement la valeur d'un objet TimeClass 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.DisquesControl">
+      <summary>
+ User Control affichant la liste des Partitions avec les Tailles 
+ et Taux d'Occupation de chaque Partition 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.DisquesControl.NomServer">
+      <summary>
+ 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	15/07/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.DisquesControl.NomLogin">
+      <summary>
+ 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	15/07/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.DisquesControl.NomPassword">
+      <summary>
+ 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	15/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle avec la liste des partitions 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.ChargeTableauUseWMI">
+      <summary>
+ Utilisation des classes WMI 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.RenvoieIconeTypeDisk(System.Int32)">
+      <summary>
+ renvoie le chemin de limage du type de disque 
+ </summary>
+ <param name="TypeDisk" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.ChargeTableauUseFSO">
+      <summary>
+ Utilisation de l'objet FileSystem 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.AddCell(System.Web.UI.HtmlControls.HtmlTableRow,System.String,System.String,System.Boolean,System.Int32)">
+      <summary>
+ Ajoute une cellule dans la ligne du tableau 
+ </summary>
+ <param name="tr" />
+ <param name="sM" />
+ <param name="Alignement" />
+ <param name="ColSpan" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.CalculProportion(System.Double,System.Double)">
+      <summary>
+ Calcule la proportion d'espace libre par rapport au total 
+ </summary>
+ <param name="TailleLibre" />
+ <param name="TailleTotale" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.DisquesControl.RenvoiCodeImage(System.Int32)">
+      <summary>
+ Permet de fournir le code pour la bonne image suivant le Taux d'Occupation 
+ </summary>
+ <param name="Taille" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.FabWebControl">
+      <summary>
+ Exemple de développement d'un CustomWebControl basé sur un Exemple d'Entête 
+ de Page que l'on placera simplement dans la page ASPX 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.FabWebControl.TitreEntete">
+      <summary>
+ Titre de l'entete que l'on utilisera dans la page 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.FabWebControl.SousTitreEntete">
+      <summary>
+ SousTitre de l'entete que l'on utilisera dans la page 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.FabWebControl.CommentaireTitreEntete">
+      <summary>
+ Commentaire de l'entete que l'on utilisera dans la page 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="P:DotNetSysInfo.FabWebControl.URLImageEntete">
+      <summary>
+ URL de l'image qui sera associée à l'entête de la page 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.FabWebControl.Render(System.Web.UI.HtmlTextWriter)">
+      <summary>
+ Sortie envoyée par le WebControl lors de son placement dans la page 
+ </summary>
+ <param name="output" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	04/08/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.FrameworkControl">
+      <summary>
+ User Control affichant la liste des derniers lancements du Process 
+ ASP.NET et les détails sur ceux-ci. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.FrameworkControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle des Process ASP.NET 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.FrameworkControl.AffProcessInfo">
+      <summary>
+ Lancement de la récupération des informations depuis le Serveur 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.FrameworkControl.AddCell(System.Web.UI.WebControls.TableRow,System.String,System.Boolean,System.String)">
+      <summary>
+ Ajoute une cellule dans la ligne du tableau 
+ </summary>
+ <param name="tr" />
+ <param name="sM" />
+ <param name="CSS" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.HardwareControl">
+      <summary>
+ Controle chargeant les Infos sur les Composants matériels 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.HardwareControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du controle des composants matériels 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ListeProcessControl">
+      <summary>
+ Controle Affichant la liste des Process en action 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeProcessControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle fournissant la liste des Processes actifs 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeProcessControl.RecupDateLancementProcess(System.String)">
+      <summary>
+ A partir de la chaine donnée par WMI transforme pour obtenir une date standard 
+ </summary>
+ <param name="DateProcess" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	24/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeProcessControl.PrepareDatatables">
+      <summary>
+ Préparation de la DataTable qui va stocker les données pour le Datagrid 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	24/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ListeProgramsControl">
+      <summary>
+ Controle Affichant le nombre d'Applications installées 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeProgramsControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du User control pour l'affichage de la liste des Programmes installés 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeProgramsControl.PrepareDatatables">
+      <summary>
+ Préparation de la DataTable qui va stocker les données pour le Datagrid 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ListeServicesControl">
+      <summary>
+ Controle Affichant la liste de tous les services Windows 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeServicesControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle avec la liste de tous les services Windows 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ListeServicesControl.PrepareDatatables">
+      <summary>
+ Préparation de la DataTable qui va stocker les données pour le Datagrid 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.MemoireControl">
+      <summary>
+ Controle Affichant les Données sur la mémoire Utilisée 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.MemoireControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle de la mémoire Utilisée 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.NetworkControl">
+      <summary>
+ Controle affichant tous les matériels Réseaux installés 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.NetworkControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle des matériels Réseaux 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.NetworkControl.AddCell(System.Web.UI.HtmlControls.HtmlTableRow,System.String,System.String,System.Boolean,System.Int32)">
+      <summary>
+ Ajoute une cellule dans la ligne du tableau 
+ </summary>
+ <param name="tr" />
+ <param name="sM" />
+ <param name="Alignement" />
+ <param name="ColSpan" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.NetworkTrafficControl">
+      <summary>
+ Controle Gérant le Traffic Réseau par l'utilisation d'SNMP 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.NetworkTrafficControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle du Traffic Réseau 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ProgramsControl">
+      <summary>
+ Controle Affichant le nombre d'Applications installées 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ProgramsControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle des Applications installées 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ServerLoginControl">
+      <summary>
+ Classe de renseignement pour une connexion sur une machine distante 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	12/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ServerLoginControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	12/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ServerLoginControl.TestSession">
+      <summary>
+ 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	15/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ServerLoginControl.ButtonValidationSRV_Click(System.Object,System.EventArgs)">
+      <summary>
+ 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	12/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ServerLoginControl.Page_PreRender(System.Object,System.EventArgs)">
+      <summary>
+ 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	15/07/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.ServicesControl">
+      <summary>
+ Controle Affichant le nombre de Services Actifs et Inactifs 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.ServicesControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle des Services 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.SignatureControl">
+      <summary>
+ Controle Gérant la Signature de l'Application 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle de la Signature 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.AfficheCSS">
+      <summary>
+ Définit le Fichier CSS à utiliser suivant la valeur choisie dans le DropDown 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	12/07/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.ChargeDropDown">
+      <summary>
+ Permet de remplir le DropDown avec la liste des CSS existant dans le répertoire 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.PrepareDatatables">
+      <summary>
+ Préparation de la DataTable qui va stocker la liste des fichiers du répertoire 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.CSSDropDownList_SelectedIndexChanged(System.Object,System.EventArgs)">
+      <summary>
+ Mise a jour de la page avec changement du CSS suivant le choix dans la dropdown 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SignatureControl.Page_PreRender(System.Object,System.EventArgs)">
+      <summary>
+ Exécution du choix du CSS juste avant l'affichage de la page 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	12/07/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo.SystemControl">
+      <summary>
+ Control affichant les Informations système de la machine 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SystemControl.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement du Controle Informations système 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo.SystemControl.RecupDateLancementOS(System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="DateProcess" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	27/06/2004	Created 
+ </history></member>
+    <member name="T:DotNetSysInfo._Default">
+      <summary>
+ Page par défaut rassemblant l'ensemble des Users Controls 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	23/06/2004	Created 
+ </history></member>
+    <member name="M:DotNetSysInfo._Default.Page_Load(System.Object,System.EventArgs)">
+      <summary>
+ Chargement de la page par défaut 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[moi]	22/06/2004	Created 
+ </history></member>
+  </members>
+</doc>
